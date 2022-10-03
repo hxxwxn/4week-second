@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;flex-shrink:0;}
+/* :root {-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:default;line-height:1.5;overflow-wrap:break-word;-moz-tab-size:4;tab-size:4} */
+html, body {height:100%;}
+body {
+    line-height: 1;
+}
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+ul {list-style: none;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+
+body {
+    font-family: $ft-kr;
+    /* 영문은 필요시 사용 */
+    letter-spacing: -0.025em;
+    // letter-spacing: -0.25px;
+    /* 포토샵에서 -25라고 되어있음 */
+    color: #222;
+    min-width: 1200px;
+    /* 화살표 포함 width */
+    font-family: 'Montserrat','noto','Open Sans','Nanum Gothic','dotum',Sans-serif;
+    line-height: 1.2;
+}

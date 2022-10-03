@@ -1,0 +1,57 @@
+.footer {
+    background: #aaa;
+    padding: 57px 0 50px;
+
+    .common-inner {
+        position: relative;
+
+        .group-info {
+
+            .addr-wrap {
+                margin-top: 22px;
+                line-height: 30px;
+                color: #fff;
+
+                a {
+                    display: inline-block;
+                    line-height: 30px;
+                }
+
+                .addr-box:last-child {
+                    margin-top: 16px;
+                    // line-height를 뺀 나머지 px
+                }
+            }
+        }
+
+        .sc-cs {
+            @include position('vt');
+            right: 0;
+            width: 300px;
+            height: 165px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            line-height: 30px;
+            color: #fff;
+            padding: 27px 0 27px 22px;
+            text-align: left;
+            
+            h3 {
+                font-family: $ft-en;
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .time {
+                font-size: 18px;
+            }
+
+            .tel {
+                font-family: $ft-en;
+                font-size: 36px;
+                font-weight: 500;
+                margin-top: 24px;
+            }
+
+        }
+    }
+}

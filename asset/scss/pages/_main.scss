@@ -1,0 +1,366 @@
+// 메인 비주얼
+.sc-visual {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    position: relative;
+
+    .visual {
+        img {
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            @include position('ct');
+            width: 660px;
+            height: 96px;
+            background-image: url(../images/maintxt.png);
+            z-index: 1;
+        }
+    }
+}
+
+// 이벤트 및 공지사항
+.sc-groupinfo {
+    display: flex;
+    padding: 100px 0;
+    justify-content: space-between;
+    align-items: center;
+
+    .border {
+        width: 540px;
+        height: 250px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .line {
+        width: 1px;
+        height: 160px;
+        background: #eee;
+    }
+
+    // 공지사항
+    .sc-notice {
+        padding-right: 60px;
+
+        .bd-upper {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 0;
+
+            .headline-medium {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+
+        .bd-list {
+            .bd-item {
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    line-height: 32px;
+                    font-family: $ft-kr;
+                    align-items: center;
+
+                    .text {
+                        @include ellipsis(1, 1);
+                        color: #505050;
+                    }
+
+                    .date {
+                        color: #909090;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// 소개
+.sc-intro {
+    height: 800px;
+
+    .wrap-box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .txt-box {
+        position: absolute;
+        left: 50%;
+        width: 600px;
+        height: 550px;
+        background: #fff;
+        padding: 100px 0 100px 70px;
+
+        img {
+            padding-bottom: 60px;
+        }
+
+        .dsc {
+            color: #505050;
+            font-family: $ft-kr;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 40px;
+            margin-bottom: 60px;
+        }
+
+        .button-more {
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 15px;
+            border-bottom: 4px solid #e3e3e3;
+            min-width: 145px;
+        }
+    }
+
+}
+
+// 상품 소개
+.sc-product {
+    padding: 100px 0;
+
+    .product-list {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+
+        .product-item {
+            flex: 1;
+
+            a {
+                display: block;
+
+                .img-box {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        margin: 0 auto;
+                    }
+                }
+
+                .text-box {
+                    padding: 30px 0 40px 0;
+
+                    .title {
+                        font-size: 18px;
+                        line-height: 36px;
+                        font-weight: bold;
+                        margin: 30px 0;
+                    }
+
+                    p {
+                        margin-top: 20px;
+                        line-height: 26px;
+                        font-family: $ft-kr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 커뮤니티
+.sc-community {
+    padding-bottom: 100px;
+
+    .community-list-top {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            padding: 0 40px;
+            flex: 1;
+            display: flex;
+            height: 80px;
+            // justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            strong {
+                font-size: 18px;
+                line-height: 36px;
+                font-weight: bold;
+                margin-right: 50px;
+                @include ellip;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 36px;
+                color: #505050;
+            }
+
+            a {
+                position: absolute;
+                right: 40px;
+            }
+        }
+    }
+
+    .community-list-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .left {
+            .img-box {
+                .position {
+                    display: block;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-image: url(../images/sns_16.png);
+                        top: 10px;
+                        left: 10px;
+                        height: 10px;
+                        width: 49px;
+                        height: 49px;
+                        z-index: 10;
+                    }
+                }
+            }
+
+
+        }
+
+        .right {
+            width: 600px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            >div {
+                width: calc((100% - 10px) / 2);
+            }
+
+            .left-top,
+            .right-top {
+                .position {
+                    display: block;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-image: url(../images/sns_14.png);
+                        top: 10px;
+                        left: 10px;
+                        height: 10px;
+                        width: 50px;
+                        height: 50px;
+                        z-index: 10;
+                    }
+                }
+            }
+
+            .left-bottom, .right-bottom {
+                .position {
+                    display: block;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-image: url(../images/sns_16.png);
+                        top: 10px;
+                        left: 10px;
+                        height: 10px;
+                        width: 49px;
+                        height: 49px;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+
+    .img-box {
+        position: relative;
+    }
+
+    .text-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+
+        a {
+            line-height: 36px;
+            color: #fff;
+            font-family: $ft-kr;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+// 게시판
+.sc-board {
+    padding: 30px 0 120px;
+    display: flex;
+    justify-content: space-between;
+
+    .bd-flex {
+        width: 510px;
+
+        .bd-upper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #ddd;
+
+            .headline-medium {
+                font-size: 22px;
+                line-height: 40px;
+                font-weight: 500;
+                padding: 10px 0;
+                margin-left: 10px;
+            }
+        }
+
+        .bd-list {
+            .bd-item {
+                border-bottom: 1px solid #ddd;
+
+                a {
+                    display: flex;
+                    margin-left: 10px;
+
+                    .date {
+                        color: #888;
+                        line-height: 60px;
+                    }
+
+                    .text {
+                        margin-left: 25px;
+                        line-height: 60px;
+                        @include ellip;
+
+                    }
+                }
+            }
+        }
+    }
+}

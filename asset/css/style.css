@@ -1,0 +1,591 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* :root {-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:default;line-height:1.5;overflow-wrap:break-word;-moz-tab-size:4;tab-size:4} */
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  /* 영문은 필요시 사용 */
+  letter-spacing: -0.025em;
+  /* 포토샵에서 -25라고 되어있음 */
+  color: #222;
+  min-width: 1200px;
+  /* 화살표 포함 width */
+  font-family: "Montserrat", "noto", "Open Sans", "Nanum Gothic", "dotum", Sans-serif;
+  line-height: 1.2;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+.common-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#skipNav {
+  position: relative;
+  z-index: 3000;
+}
+
+#skipNav a {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 138px;
+  border: 1px solid #4ec53d;
+  background: #333;
+  text-align: center;
+}
+
+#skipNav a:active,
+#skipNav a:focus {
+  top: 0;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+#skipNav span {
+  display: inline-block;
+  padding: 2px 6px 0 0;
+  font-size: 13px;
+  line-height: 26px;
+  color: #fff;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.headline {
+  font-size: 36px;
+  color: #000;
+  font-family: "Montserrat", "noto", "Open Sans", "Nanum Gothic", "dotum", Sans-serif;
+  font-weight: 600;
+  line-height: 36px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  padding-top: 40px;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: #f3f3f3;
+  top: 0;
+  left: 0;
+  padding: 0 80px;
+}
+.header .group-flex {
+  position: relative;
+  padding: 0 80px;
+  height: 85px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .group-flex .logo a {
+  display: block;
+}
+.header .group-flex .utill-area {
+  display: flex; /* 여백 지우기 */
+  position: absolute;
+  right: 80px;
+  top: -40px;
+  gap: 35px;
+}
+.header .group-flex .utill-area a {
+  font-size: 14px;
+  color: #000;
+  line-height: 40px;
+  font-weight: 600;
+}
+.header .group-flex .gnb .gnb-list {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 85px;
+}
+.header .group-flex .gnb .gnb-list .gnb-item {
+  flex: 1;
+}
+.header .group-flex .gnb .gnb-list .gnb-item .link-depth {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+.header .group-flex .gnb .gnb-list .gnb-item .link-depth:hover {
+  border-bottom: 2px solid #000;
+}
+.header .group-flex .icon-area {
+  display: flex;
+  gap: 35px;
+}
+
+.footer {
+  background: #aaa;
+  padding: 57px 0 50px;
+}
+.footer .common-inner {
+  position: relative;
+}
+.footer .common-inner .group-info .addr-wrap {
+  margin-top: 22px;
+  line-height: 30px;
+  color: #fff;
+}
+.footer .common-inner .group-info .addr-wrap a {
+  display: inline-block;
+  line-height: 30px;
+}
+.footer .common-inner .group-info .addr-wrap .addr-box:last-child {
+  margin-top: 16px;
+}
+.footer .common-inner .sc-cs {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 300px;
+  height: 165px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  line-height: 30px;
+  color: #fff;
+  padding: 27px 0 27px 22px;
+  text-align: left;
+}
+.footer .common-inner .sc-cs h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+.footer .common-inner .sc-cs .time {
+  font-size: 18px;
+}
+.footer .common-inner .sc-cs .tel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+
+.btn-arr {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 21px;
+  height: 25px;
+  bottom: 72px;
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  display: flex;
+  gap: 11px;
+  height: 80px;
+  align-items: center;
+}
+.pagination .bullet {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+.sc-slide .pagination .bullet {
+  border: 2px solid #fff;
+}
+.sc-slide .pagination .bullet.active {
+  background: #fff;
+}
+.sc-review .pagination .bullet {
+  border: 2px solid #ddd;
+}
+.sc-review .pagination .bullet.active {
+  background: #ddd;
+}
+
+.top-btn {
+  position: fixed;
+  background: #000;
+  opacity: 0.8;
+  bottom: 65px;
+  right: 75px;
+  border-radius: 50%;
+}
+.top-btn a {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.top-btn a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sc-visual {
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  position: relative;
+}
+.sc-visual .visual img {
+  width: 100%;
+}
+.sc-visual .visual::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 660px;
+  height: 96px;
+  background-image: url(../images/maintxt.png);
+  z-index: 1;
+}
+
+.sc-groupinfo {
+  display: flex;
+  padding: 100px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.sc-groupinfo .border {
+  width: 540px;
+  height: 250px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.sc-groupinfo .line {
+  width: 1px;
+  height: 160px;
+  background: #eee;
+}
+.sc-groupinfo .sc-notice {
+  padding-right: 60px;
+}
+.sc-groupinfo .sc-notice .bd-upper {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+.sc-groupinfo .sc-notice .bd-upper .headline-medium {
+  font-size: 18px;
+  font-weight: bold;
+}
+.sc-groupinfo .sc-notice .bd-list .bd-item a {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 32px;
+  font-family: "Noto Sans KR", sans-serif;
+  align-items: center;
+}
+.sc-groupinfo .sc-notice .bd-list .bd-item a .text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1;
+  max-height: 1;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  color: #505050;
+}
+.sc-groupinfo .sc-notice .bd-list .bd-item a .date {
+  color: #909090;
+}
+
+.sc-intro {
+  height: 800px;
+}
+.sc-intro .wrap-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.sc-intro .txt-box {
+  position: absolute;
+  left: 50%;
+  width: 600px;
+  height: 550px;
+  background: #fff;
+  padding: 100px 0 100px 70px;
+}
+.sc-intro .txt-box img {
+  padding-bottom: 60px;
+}
+.sc-intro .txt-box .dsc {
+  color: #505050;
+  font-family: "Noto Sans KR", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 40px;
+  margin-bottom: 60px;
+}
+.sc-intro .txt-box .button-more {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 15px;
+  border-bottom: 4px solid #e3e3e3;
+  min-width: 145px;
+}
+
+.sc-product {
+  padding: 100px 0;
+}
+.sc-product .product-list {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+.sc-product .product-list .product-item {
+  flex: 1;
+}
+.sc-product .product-list .product-item a {
+  display: block;
+}
+.sc-product .product-list .product-item a .img-box {
+  width: 100%;
+  height: 100%;
+}
+.sc-product .product-list .product-item a .img-box img {
+  margin: 0 auto;
+}
+.sc-product .product-list .product-item a .text-box {
+  padding: 30px 0 40px 0;
+}
+.sc-product .product-list .product-item a .text-box .title {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.sc-product .product-list .product-item a .text-box p {
+  margin-top: 20px;
+  line-height: 26px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.sc-community {
+  padding-bottom: 100px;
+}
+.sc-community .community-list-top {
+  display: flex;
+  justify-content: space-between;
+}
+.sc-community .community-list-top li {
+  padding: 0 40px;
+  flex: 1;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  position: relative;
+}
+.sc-community .community-list-top li strong {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: bold;
+  margin-right: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
+.sc-community .community-list-top li p {
+  font-size: 16px;
+  line-height: 36px;
+  color: #505050;
+}
+.sc-community .community-list-top li a {
+  position: absolute;
+  right: 40px;
+}
+.sc-community .community-list-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.sc-community .community-list-bottom .left .img-box .position {
+  display: block;
+}
+.sc-community .community-list-bottom .left .img-box .position::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/sns_16.png);
+  top: 10px;
+  left: 10px;
+  height: 10px;
+  width: 49px;
+  height: 49px;
+  z-index: 10;
+}
+.sc-community .community-list-bottom .right {
+  width: 600px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.sc-community .community-list-bottom .right > div {
+  width: calc((100% - 10px) / 2);
+}
+.sc-community .community-list-bottom .right .left-top .position,
+.sc-community .community-list-bottom .right .right-top .position {
+  display: block;
+}
+.sc-community .community-list-bottom .right .left-top .position::after,
+.sc-community .community-list-bottom .right .right-top .position::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/sns_14.png);
+  top: 10px;
+  left: 10px;
+  height: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+.sc-community .community-list-bottom .right .left-bottom .position, .sc-community .community-list-bottom .right .right-bottom .position {
+  display: block;
+}
+.sc-community .community-list-bottom .right .left-bottom .position::after, .sc-community .community-list-bottom .right .right-bottom .position::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/sns_16.png);
+  top: 10px;
+  left: 10px;
+  height: 10px;
+  width: 49px;
+  height: 49px;
+  z-index: 10;
+}
+.sc-community .img-box {
+  position: relative;
+}
+.sc-community .text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sc-community .text-box a {
+  line-height: 36px;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sc-board {
+  padding: 30px 0 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.sc-board .bd-flex {
+  width: 510px;
+}
+.sc-board .bd-flex .bd-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #ddd;
+}
+.sc-board .bd-flex .bd-upper .headline-medium {
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: 500;
+  padding: 10px 0;
+  margin-left: 10px;
+}
+.sc-board .bd-flex .bd-list .bd-item {
+  border-bottom: 1px solid #ddd;
+}
+.sc-board .bd-flex .bd-list .bd-item a {
+  display: flex;
+  margin-left: 10px;
+}
+.sc-board .bd-flex .bd-list .bd-item a .date {
+  color: #888;
+  line-height: 60px;
+}
+.sc-board .bd-flex .bd-list .bd-item a .text {
+  margin-left: 25px;
+  line-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
